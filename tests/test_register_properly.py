@@ -1,12 +1,12 @@
 import pytest
-from tests.test_base import TestBase
+from tests.base_test import BaseTest
 from test_data import test_data
 from pages.register_page import RegisterPage
 
-@pytest.mark.usefixtures("test_setup")
-class RegisterProperlyTest(TestBase):
+@pytest.mark.usefixtures("setup")
+class RegisterProperlyTest(BaseTest):
 
-    def register_properly_test(self, test_setup):
+    def test_register_properly(self, setup):
         register_page = RegisterPage(self.driver)
         register_page.type_in_first_name(test_data.name)
         register_page.type_in_last_name(test_data.last_name)

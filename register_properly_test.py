@@ -1,4 +1,4 @@
-from tests import test_base as test_base
+from tests import base_test as test_base
 from test_data import test_data as test_data
 from pages import register_page as register_page
 
