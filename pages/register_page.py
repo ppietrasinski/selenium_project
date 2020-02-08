@@ -1,3 +1,5 @@
+from selenium import webdriver
+
 class RegisterPage:
 
     def __init__(self, driver):
@@ -8,6 +10,7 @@ class RegisterPage:
         self.email_textbox = self.driver.find_element_by_name('email')
         self.password_textbox = self.driver.find_element_by_name('password')
         self.confirm_password_textbox = self.driver.find_element_by_name('confirmpassword')
+        self.sign_up_button = self.driver.find_element_by_xpath("//div[@class='form-group']//button")
 
     def type_in_first_name(self, used_name=' '):
         self.first_name_textbox.send_keys(used_name)
@@ -26,3 +29,6 @@ class RegisterPage:
 
     def type_in_confirm_password(self, used_confirmed_password=' '):
         self.confirm_password_textbox.send_keys(used_confirmed_password)
+
+    def click_submit_button(self):
+        self.sign_up_button.click()
