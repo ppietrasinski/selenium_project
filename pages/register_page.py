@@ -2,6 +2,8 @@ from selenium import webdriver
 
 class RegisterPage:
 
+    #PAGE OBJECT PATTERN
+
     def __init__(self, driver):
         self.driver = driver
         self.first_name_textbox = self.driver.find_element_by_name('firstname')
