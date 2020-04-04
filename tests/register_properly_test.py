@@ -6,12 +6,15 @@ import time
 from pages.account_page import AccountPage
 from time import sleep
 from selenium.webdriver.support import expected_conditions as EC
+import logging
 
 
 @pytest.mark.usefixtures("setup")
 class TestRegisterProperly(BaseTest):
 
     def test_register_properly(self, setup):
+        logger = logging.getLogger(__name__)
+
         register_page = RegisterPage(self.driver)
         used_name = test_data.name
         used_last_name = test_data.last_name
@@ -32,3 +35,4 @@ class TestRegisterProperly(BaseTest):
         test_data.login_time(t2, t1)
 
         assert account_page.get_hi_name_text() == f"Hi, {used_name} {used_last_name}"
+        logger.info('User can login with valid credentails without any issues')

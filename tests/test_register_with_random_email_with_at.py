@@ -5,6 +5,7 @@ from pages.register_page import RegisterPage
 from pages.account_my_profile_page import AccountMyProfilePage
 import time
 from pages.account_page import AccountPage
+import logging
 
 import pdb
 
@@ -12,6 +13,8 @@ import pdb
 class TestRegisterWithRandomEmailWithAt(BaseTest):
 
     def test_register_properly(self, setup):
+        logger = logging.getLogger(__name__)
+
         register_page = RegisterPage(self.driver)
         used_name = test_data.name
         used_last_name = test_data.last_name
@@ -42,7 +45,8 @@ class TestRegisterWithRandomEmailWithAt(BaseTest):
         my_profile = AccountMyProfilePage(self.driver)
         email_on_my_profile = my_profile.get_email_data()
 
-        print(invalid_email + ' - email wpisany przez program')
-        print(email_on_my_profile + ' - email ppbramy z my profile')
+        logger.info(invalid_email + ' - email used by program')
+        logger.info(email_on_my_profile + ' - email get from profile page')
 
         assert email_on_my_profile == invalid_email
+        logger.info('user can register new account with valid email address without any issues')
