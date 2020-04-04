@@ -1,4 +1,4 @@
-#### **How to run tests.**
+### **How to run tests.**
 
 pip packages that have to be imported:
 webdriver-manager ( pip install webdriver-manager )
@@ -6,7 +6,7 @@ pytest ( pip install pytest )
 selenium ( pip install selenium )
 
 
-#### **Running tests:**
+### **Running tests:**
 
 All tests are created to be able to run in one moment or separately, one by one. To run them all at once, move 
 in terminal to /project directory and type py.test to run separately 
@@ -18,7 +18,7 @@ To run only google tests move to tests_google/tests/ directory and use py.test c
 pytest.ini file is configured to show logs info logs level
 
 
-#### **Test scenerios:**
+### **Test scenerios:**
 
 **TESTS of kurs-selenium.pl/demo/**
 1. register_properly_test.py - check if user can register account with valid data without any issues
