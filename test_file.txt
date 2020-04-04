@@ -1,4 +1,0 @@
-testing file 123
-test 2 
-test już z 4 marca
-kolejny commit testowy 04 marca 2020 12:24 AM

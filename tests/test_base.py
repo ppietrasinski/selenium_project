@@ -12,6 +12,7 @@ class BaseTest:
     @pytest.fixture()
     def setup(self):
         self.driver = webdriver.Chrome(ChromeDriverManager().install())
+        # self.driver = webdriver.get()
         self.driver.implicitly_wait(20)
         self.driver.set_window_position(0, 0)
         self.driver.set_window_size(1370, 1080)
