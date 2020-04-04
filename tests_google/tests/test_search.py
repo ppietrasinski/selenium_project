@@ -1,8 +1,8 @@
 import pytest
-from task_2.tests.base_test import BaseTest
-from task_2.pages.search_page import SearchPage
-from task_2.pages.result_page import ResultPage
-from task_2.test_data import test_data
+from tests_google.tests.base_test import BaseTest
+from tests_google.pages.search_page import SearchPage
+from tests_google.pages.result_page import ResultPage
+from tests_google.test_data import test_data
 from bcolors import bcolors
 
 

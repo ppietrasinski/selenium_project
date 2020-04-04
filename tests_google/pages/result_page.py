@@ -1,8 +1,4 @@
 import re
-from selenium import webdriver
-from selenium.common.exceptions import NoSuchElementException
-from selenium.webdriver.common.by import By
-
 
 class ResultPage:
 
@@ -11,7 +7,7 @@ class ResultPage:
         self.amount_of_result_tiles = self.driver.find_elements_by_xpath("//div[@class='g']")
         self.amount_of_result_places = self.driver.find_elements_by_xpath("//div[@class='cXedhc']")
         self.images_result_section = self.driver.find_elements_by_xpath("//div[@class='LnbJhc']")
-        self.results_quantity_displayer = self.driver.find_element_by_id('mBMHK')
+        self.results_quantity_displayer = self.driver.find_element_by_id('result-stats')
 
     def get_amount_of_searched_results(self):
         return self.results_quantity_displayer.text
@@ -29,7 +25,6 @@ class ResultPage:
             return True
 
         #method is checking if element actually exist on page or if it's not
-
 
     def edit_result_string(self, string):
         edited_string_list = (re.sub("[(].*?[)]", "", string).split(' '))
