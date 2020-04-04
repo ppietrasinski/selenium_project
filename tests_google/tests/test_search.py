@@ -29,7 +29,7 @@ class TestSearch(BaseTest):
         logger.info(f'{bcolors.OKBLUE}INFO: About {search_result_only} results were found{bcolors.ENDC}')
 
         # SECOND CHECK:
-        # Is first 10 results displayed on page one?
+        # Are first 10 results displayed on page one?
         logger.info('\nSECOND CHECK: Is first 10 results displayed on page one?')
         results_amount = result_page.get_amount_of_displayed_results_on_page() + result_page.get_amount_of_displayed_places_results_on_page()
         logger.info(f'{bcolors.OKBLUE}INFO: {results_amount} results of search can be seen on the first page. Images, videos and articles were not included{bcolors.ENDC}')

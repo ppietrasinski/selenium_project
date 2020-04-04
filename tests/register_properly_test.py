@@ -35,4 +35,4 @@ class TestRegisterProperly(BaseTest):
         test_data.login_time(t2, t1)
 
         assert account_page.get_hi_name_text() == f"Hi, {used_name} {used_last_name}"
-        logger.info('User can login with valid credentails without any issues')
+        logger.info('User can register with valid data without any issues')
