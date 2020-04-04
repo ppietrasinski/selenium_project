@@ -1,9 +1,12 @@
 ### **How to run tests.**
 
 pip packages that have to be imported:
-webdriver-manager ( pip install webdriver-manager )
-pytest ( pip install pytest )
-selenium ( pip install selenium )
+
+webdriver-manager ( `pip install webdriver-manager` )
+
+pytest ( `pip install pytest` )
+
+selenium ( `pip install selenium` )
 
 
 ### **Running tests:**
