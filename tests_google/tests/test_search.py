@@ -43,7 +43,7 @@ class TestSearch(BaseTest):
 
 
         # THIRD CHECK:
-        # Have any pictures been found?
+        # Have many pictures been found?
     def test_if_pictures_founded(self, before_test):
         self.logger.info('\nTHIRD CHECK: Have any pictures been found?')
         result_page = ResultPage(self.driver)
