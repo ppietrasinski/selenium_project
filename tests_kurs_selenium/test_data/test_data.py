@@ -24,9 +24,23 @@ def generate_invalid_email_valid_format(num1=5, num2=10, num3=6):
 def login_time(time1, time2):
     print(f'{time2 - time1} time needed to login to my account')
 
+def generate_all_data():
+    name = names.get_first_name()
+    last_name = names.get_last_name()
+    full_name = name + ' ' + last_name
+    email = generate_valid_email(name, last_name)
+    return {
+        "name": name,
+        "last name": last_name,
+        "full name": full_name,
+        "email": email
+    }
+
 name = names.get_first_name()
 
 last_name = names.get_last_name()
+
+full_name = name + ' ' + last_name
 
 phone_number = generte_random_phone_number()
 
