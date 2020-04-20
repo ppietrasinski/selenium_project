@@ -4,8 +4,6 @@ from test_data import test_data
 from pages.register_page import RegisterPage
 import time
 from pages.account_page import AccountPage
-from time import sleep
-from selenium.webdriver.support import expected_conditions as EC
 import logging
 
 

@@ -7,7 +7,6 @@ import time
 from pages.account_page import AccountPage
 import logging
 
-import pdb
 
 @pytest.mark.usefixtures("setup")
 class TestRegisterWithRandomEmailWithAt(BaseTest):
