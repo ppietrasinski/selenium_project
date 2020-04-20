@@ -1,11 +1,10 @@
 import pytest
-from tests.test_base import BaseTest
-from test_data import test_data
-from pages.register_page import RegisterPage
+from tests_kurs_selenium.tests.test_base import BaseTest
+from tests_kurs_selenium.test_data import test_data
+from tests_kurs_selenium.pages.register_page import RegisterPage
 import time
-from pages.account_page import AccountPage
+from tests_kurs_selenium.pages.account_page import AccountPage
 import logging
-
 
 @pytest.mark.usefixtures("setup")
 class TestRegisterProperly(BaseTest):

@@ -1,6 +1,4 @@
-'''This is testing commentary'''
 
-from selenium import webdriver
 
 class AccountPage:
 

@@ -1,7 +1,6 @@
 import names
 import random
 import string
-import pdb
 
 def generte_random_phone_number(number_length=10):
     phone_num = ''

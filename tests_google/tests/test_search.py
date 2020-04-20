@@ -6,7 +6,6 @@ from ..test_data import test_data
 from bcolors import bcolors
 import logging
 
-
 @pytest.mark.usefixtures("setup_test")
 class TestSearch(BaseTest):
     logger = logging.getLogger(__name__)

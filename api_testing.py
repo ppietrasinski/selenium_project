@@ -1,6 +1,5 @@
 import requests
 
-
 url = 'https://jsonplaceholder.typicode.com/users/'
 # resp = requests.get()
 
