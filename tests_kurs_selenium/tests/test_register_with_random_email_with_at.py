@@ -11,7 +11,11 @@ import logging
 @pytest.mark.usefixtures("setup")
 class TestRegisterWithRandomEmailWithAt(BaseTest):
 
-    def test_register_properly(self, setup):
+    @pytest.fixture()
+    def before_test(self, setup):
+        self.driver.get(BaseTest.app_url + BaseTest.register_app_url)
+
+    def test_register_properly(self, before_test):
         logger = logging.getLogger(__name__)
 
         register_page = RegisterPage(self.driver)

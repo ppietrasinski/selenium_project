@@ -9,7 +9,11 @@ import logging
 @pytest.mark.usefixtures("setup")
 class TestRegisterProperly(BaseTest):
 
-    def test_register_properly(self, setup):
+    @pytest.fixture()
+    def before_test(self, setup):
+        self.driver.get(BaseTest.app_url + BaseTest.register_app_url)
+
+    def test_register_properly(self, before_test):
         logger = logging.getLogger(__name__)
 
         register_page = RegisterPage(self.driver)
@@ -33,3 +37,4 @@ class TestRegisterProperly(BaseTest):
 
         assert account_page.get_hi_name_text() == f"Hi, {used_name} {used_last_name}"
         logger.info('User can register with valid data without any issues')
+4
